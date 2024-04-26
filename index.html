@@ -29,14 +29,5 @@
     <p>&copy; 2024 blogcode.dev</p>
     <p id="commit-info"></p>
   </footer>
-  <script>
-    const commitInfo = document.getElementById('commit-info');
-    const commitSha = CF_PAGES_COMMIT_SHA;
-    const branchName = CF_PAGES_BRANCH;
-
-    if (commitSha && branchName) {
-      commitInfo.textContent = `Deployed from branch ${branchName} (commit ${commitSha})`;
-    }
-  </script>
 </body>
 </html>

@@ -25,8 +25,18 @@
       Click Here
     </button>
   </main>
-  <footer class="bg-gray-800 text-white py-4 px-6">
+  <footer class="bg-gray-800 text-white py-4 px-6 flex flex-col">
     <p>&copy; 2024 blogcode.dev</p>
+    <p id="commit-info"></p>
   </footer>
+  <script>
+    const commitInfo = document.getElementById('commit-info');
+    const commitSha = import.meta.env.COMMIT_SHA;
+    const branchName = import.meta.env.BRANCH_NAME;
+
+    if (commitSha && branchName) {
+      commitInfo.textContent = `Deployed from branch ${branchName} (commit ${commitSha})`;
+    }
+  </script>
 </body>
 </html>
